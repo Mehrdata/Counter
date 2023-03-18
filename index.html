@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <title>Counter App</title>
+</head>
+<body>
+    
+    <header class="header">
+        <a href="https://abyx.ir/mehrdata">
+            <img src="/images/info.svg" alt="info-btn" class="header-info" >
+          </a>
+        <img src="/images/reset.svg" alt="reset-btn" onclick="reset()" class="header-icon">
+    </header>
+
+
+    <h2 id="counter">0</h2>
+
+
+    <div class="btn-holder">
+        <div id="inc-btn" class="btn" onclick="decrement()">-</div>
+        <div id="inc-btn" class="btn" onclick="increment()">+</div>
+    </div>
+
+
+
+    <div class="footer">
+        <button type="button" id="save-btn" onclick="save()">SAVE</button>
+        <div>
+            <h3>Saved Records:</h3>
+            <p id="saved" class="saved-numbers"></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div>
+            <h3>Total:</h3>
+            <p id="sum" class="saved-numbers"></p>
+        </div>
+    </div>
+
+    
+
+    <script src="/index.js"></script>
+</body>
+</html>
