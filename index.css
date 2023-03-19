@@ -1,7 +1,20 @@
+html{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body{
     background-color: #141517;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
 }
 
 
@@ -49,6 +62,7 @@ header{
 }
 
 .btn-holder{
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -85,12 +99,17 @@ header{
     box-shadow: 0px 0px 20px white;}
 
 
-    .footer{
+    .text-section{
+        height: 80px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         margin-top: 20px;
         justify-content: center;
         align-items: center;
+        border-radius: 10px;
+        background-color: black;
+        padding: 5px;
     }
 
     #save-btn{
@@ -107,6 +126,7 @@ header{
         transition: 1s;
         user-select: none;
         cursor: default;
+        margin: 30px 0px 10px;
     }
 
     #save-btn:hover{
@@ -118,6 +138,7 @@ header{
 
 
     .header-icon{
+        user-select: none;
         cursor: pointer;
         transform: 1s;
         transition-duration: 0.3s;
@@ -131,6 +152,7 @@ header{
 
 
     .header-info{
+        user-select: none;
         cursor: help;
         margin-top: 5px;
         transform: 1s;
@@ -144,3 +166,8 @@ header{
         transform: 1s;
     }
 
+.log{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

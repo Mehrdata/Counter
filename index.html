@@ -10,13 +10,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <title>Counter App</title>
 </head>
+
+
+
 <body>
     
     <header class="header">
         <a href="https://abyx.ir/mehrdata">
-            <img src="/images/info.svg" alt="info-btn" class="header-info" >
+            <img src="https://abyx.ir/wp-content/uploads/2023/03/info.svg" alt="info-btn" class="header-info" >
           </a>
-        <img src="/images/reset.svg" alt="reset-btn" onclick="reset()" class="header-icon">
+        <img src="https://abyx.ir/wp-content/uploads/2023/03/reset.svg" alt="reset-btn" onclick="reset()" class="header-icon">
     </header>
 
 
@@ -29,21 +32,27 @@
     </div>
 
 
+    <button type="button" id="save-btn" onclick="save()">SAVE</button>
 
-    <div class="footer">
-        <button type="button" id="save-btn" onclick="save()">SAVE</button>
-        <div>
-            <h3>Saved Records:</h3>
-            <p id="saved" class="saved-numbers"></p>
+
+    
+    <div class="log">
+        <div class="text-section">
+            <div>
+                <h3>Saved Records:</h3>
+                <p id="saved" class="saved-numbers"></p>
+            </div>
+        </div>
+    
+        <div class="text-section">
+            <div>
+                <h3>Total:</h3>
+                <p id="sum" class="saved-numbers"></p>
+            </div>
         </div>
     </div>
 
-    <div class="footer">
-        <div>
-            <h3>Total:</h3>
-            <p id="sum" class="saved-numbers"></p>
-        </div>
-    </div>
+    
 
     
 
