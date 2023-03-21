@@ -1,9 +1,15 @@
+@font-face {
+    font-family: digital;
+    src: url(Fonts/Digital.TTF);
+}
+
 html{
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
 }
 
 body{
@@ -15,50 +21,56 @@ body{
     text-align: center;
     width: 100%;
     max-width: 500px;
+    transition-duration: 1s;
 }
 
 
-h2{
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 10rem;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-    user-select: none;
-}
-
-h3{
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
-    text-align: center;
-}
-
-p{
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 0.7rem;
-    text-align: center;
-    margin-top: 5px;
-}
-
-
-
-
-.saved-numbers{
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
-    text-align: center;
-}
-
-header{
+.navbar{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    align-content: center;
+    gap: 40px;
     margin-top: 20px;
+    font-size: 2em;
+    color: white;
+}
+
+.navbar .h-icon{
+    transition-duration: 0.3s;
+}
+
+.navbar .h-icon:hover{
+    transform: scale(80%);
+    transition-duration: 0.3s;
+}
+
+.navbar-light{
+    color: #141517;
+}
+
+.light-mode{
+    background-color: #F0F0F0;
+    transition-duration: 1s;
+}
+
+h2{
+    color: #FF0000;
+    font-family: digital;
+    font-size: 12rem;
+    margin:  10px 0px 10px;
+    text-align: center;
+    user-select: none;
+    font-weight: 100;
+    text-shadow: 0px 0px 20px #FF0000;
+    transition-duration: 2s;
+    padding: 0px;
+}
+
+.h2-light{
+    color: #222;
+    text-shadow: 0px 0px 20px #222;
 }
 
 .btn-holder{
@@ -71,23 +83,20 @@ header{
 }
 
 .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #141517;
     border-radius: 100%;
     width: 80px;
     height: 80px;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 3em;
     color: white;
-    display: flex;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    flex-direction: column;
-    justify-content: center;
+    font-family: digital;
     outline: white;
     outline-width: 1px;
     outline-style: solid;
     transition: 1s;
-    user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -95,79 +104,74 @@ header{
     background-color: white;
     color: #141517;
     cursor: pointer;
+    transition-duration: 0.5s;
     transition-duration: 0s;
-    box-shadow: 0px 0px 20px white;}
+    box-shadow: 0px 0px 20px rgb(94, 94, 94);
+}
 
+.btn-light{
+    color: #222;
+    background-color: white;
+    outline: #222;
+    outline-width: 1px;
+    outline-style: solid;
+}
 
-    .text-section{
-        height: 80px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        background-color: black;
-        padding: 5px;
-    }
+.save-round-btn{
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    width: 140px;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    transition: 1s;
+    user-select: none;
+    cursor: default;
+    margin: 30px 0px 10px;
+}
 
-    #save-btn{
-        color: black;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 1rem;
-        text-align: center;
-        width: 140px;
-        height: 40px;
-        background-color: white;
-        border-radius: 5px;
-        border: 0;
-        outline: 0;
-        transition: 1s;
-        user-select: none;
-        cursor: default;
-        margin: 30px 0px 10px;
-    }
+.save-round-btn:hover{
+    background-color: white;
+    transition-duration: 0s;
+    box-shadow: 0px 0px 20px white;
+    color: black;
+}
 
-    #save-btn:hover{
-        background-color: white;
-        transition-duration: 0s;
-        box-shadow: 0px 0px 20px white;
-        color: black;
-    }
-
-
-    .header-icon{
-        user-select: none;
-        cursor: pointer;
-        transform: 1s;
-        transition-duration: 0.3s;
-    }
-
-
-    .header-icon:hover{
-        transform: rotate(360deg);
-        transform: 1s;
-    }
-
-
-    .header-info{
-        user-select: none;
-        cursor: help;
-        margin-top: 5px;
-        transform: 1s;
-        transition-duration: 0.3s;
-    }
-
-
-    
-    .header-info:hover{
-        transform: rotate(360deg);
-        transform: 1s;
-    }
+.save-round-btn-light{
+color: white;
+background-color: #222;
+}
 
 .log{
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+.text-section{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: black;
+    padding: 5px;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+    transition: 1s;
+}
+
+.text-section-light{
+    background-color: #C8C8C8;
+    padding: 5px;
+    color: #222;
 }

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/8d23afc7c9.js" crossorigin="anonymous"></script>
     <title>Counter App</title>
 </head>
 
@@ -15,36 +16,36 @@
 
 <body>
     
-    <header class="header">
-        <a href="https://abyx.ir/mehrdata">
-            <img src="https://abyx.ir/wp-content/uploads/2023/03/info.svg" alt="info-btn" class="header-info" >
-          </a>
-        <img src="https://abyx.ir/wp-content/uploads/2023/03/reset.svg" alt="reset-btn" onclick="reset()" class="header-icon">
-    </header>
+    <div class="navbar" id="navbar">
+        <i class="fa-solid fa-circle-half-stroke h-icon" id="head-icon" onclick="lightMod()"></i>
+        <i class="fa-solid fa-arrow-rotate-left h-icon" onclick="reset()"></i>
+        <!-- <i class="fa-solid fa-circle-info h-icon"></i> -->
+    </div>
 
 
     <h2 id="counter">0</h2>
 
 
     <div class="btn-holder">
-        <div id="inc-btn" class="btn" onclick="decrement()">-</div>
+        <div id="dec-btn" class="btn" onclick="decrement()">-</div>
         <div id="inc-btn" class="btn" onclick="increment()">+</div>
     </div>
 
 
-    <button type="button" id="save-btn" onclick="save()">SAVE</button>
+    <button type="button" id="save-btn" class="save-round-btn" onclick="save()">SAVE</button>
 
 
     
     <div class="log">
-        <div class="text-section">
+        <div id="text-box1" class="text-section">
             <div>
                 <h3>Saved Records:</h3>
                 <p id="saved" class="saved-numbers"></p>
             </div>
         </div>
     
-        <div class="text-section">
+
+        <div id="text-box2" class="text-section">
             <div>
                 <h3>Total:</h3>
                 <p id="sum" class="saved-numbers"></p>
@@ -53,9 +54,6 @@
     </div>
 
     
-
-    
-
     <script src="/index.js"></script>
 </body>
 </html>
